@@ -1,0 +1,12 @@
+demandeur_demande : sql of it 
+          select
+    to_char(sa_demande.dateenregistrement,'yyyy') as annee_eg,to_char(sa_demande.dateEnregistrement,'mm') as moi_eg,
+    sa_demandeur.sexe,sa_demandeur.iddemandeur , to_char(sysdate,'yyyy')-to_char(sa_demandeur.DATENAISSANCE,'yyyy') as age , sa_structure.idstructure
+from
+ sa_demande 
+join  sa_demandeur on sa_demandeur.iddemandeur = sa_demande.iddemandeur , sa_structure
+
+ 
+where  sa_demande.iddemandeur <10000
+*note : id structure manssha9ohach najmo naho jointure ta3ha .
+in temps nraj3o mois mano nahsbo semester ndiro dictanct khtar ma3anach id bssah fi demandeur demande lazem mandirohach.
